@@ -31,21 +31,71 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
 # Game Project Scope
 
 ## Application View Template
-The application uses this template to define content view states to update as views change:
-- **Header View State:** Public or Private, depending on whether the user has been authenticated
-  - _**Public:**_ show "sign up" and "sign in" links
-  - _**Private:**_ show game and user admin links
-
-
-- **Content View State:** the main square in application display can contain
-  - _**Grid:**_ displays a 3x3 grid for game play views or to look like the game board for static views
-  - _**Form:**_ displays a box the size of the 3x3 grid containing form inputs
-
-
-- **Message:** element for showing game messages to the player(s)
-- **Footer:** static footer containing copyright information
+The application uses this template to define content view states to update as views change.
 
 <a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" width="50%"></a>
+
+The template consists of four elements:
+
+- **Header: **conent depends on authentication state of the user
+- **Content: **fixed size area for showing game play and dialog boxes for user input
+- **Message: **element for showing game messages to the player(s)
+- **Footer: **static footer containing copyright information
+
+### Header View States
+The header has two view states, _public_ or _private,_ depending on whether the user has been authenticated.
+
+#### Public Header View State
+* _**Link: **_ sign up
+* _**Link: **_ sign in
+
+#### Private Header View State
+* _**Brand Title: **_ "tic tac toe”
+* _**Menu: **_ User (email) Dropdown
+    * _**Link: **_ save game (only active in live game)
+    * _**Link: **_ load game
+    * _**Link: **_ change password
+    * _**Link: **_ sign out
+
+
+### Content View States
+The main square in application display can contain
+- _**Grid:**_ displays a 3x3 grid for game play views or to look like the game board for static views
+- _**Form:**_ displays a box the size of the 3x3 grid containing form inputs
+
+#### Content View State: Splash Screen
+* _**Layout: **_ 3x3 board grid
+* _**Content: **_ Characters for “tic tac toe” in grid
+
+#### Content View State: Sign up
+* _**Layout: **_ form
+* _**Inputs: **_ email, password, and confirm password
+* _**Links: **_ submit and cancel
+
+#### Content View State: Sign in
+* _**Layout: **_ : form
+* _**Inputs: **_ email and password
+* _**Links: **_ submit and cancel
+
+#### Content View State: Change Password
+* _**Layout: **_ form
+* _**Inputs: **_ password and confirm password
+* _**Links: **_ submit and cancel
+
+#### Content View State: Start Game
+* _**Layout: **_ 3x3 board grid
+* _**Links: **_ start game
+
+#### Content View State: Play Game
+* _**Layout: **_ 3x3 board grid
+* _**Squares: **_
+    * _**Link: **_ clickable square as blank button before select
+    * _**Output: **_ static display of “X” or “O” after select
+
+#### Content View State: Game Over
+* _**Layout: **_ 3x3 board grid
+* Link: play again
+
 
 ## User Stories & Wireframes
 
@@ -141,7 +191,7 @@ These user stories have not yet been groomed and do not have updated wireframes:
 -  **Total Score:** As a player, I want to see the total number of games I have won so that I can understand my skill level.
 
 
-## Planned Data Structure
+## Data Structures
 
 ### Board Object
 A **Board** object is the primary data structure representing the game play environment.
