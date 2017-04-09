@@ -34,7 +34,7 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
 - [Project Approach](#project-approach)
 - [Modularity](#modularity)
 - [Version Control](#version-control)
-- [Creative Spin](creative-spin)
+- [Creative Spin](#creative-spin)
 - [Application View Template](#application-template-and-view-states)
   - [Header View States](#header-view-states)
   - [Content View States](#content-view-states)
@@ -56,24 +56,28 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
 
 ## Project Approach
 
-STATEMENT OF PROJECT APPROACH GOES HERE (How you plan to approach this project.)
+The approach to this project is to leverage view states to keep the level of complexity of the game application to a minimum. The game display will be structured as four layout components that will manage their own content based on which view the application is expecting. These view states will be determined by the user's authentication status, the current state of game play, and any user input. Ideally, this structure will result in simple system of components that communicate state changes to each other but who are responsible for managing their own logic and display output.
 
 ## Modularity
 
-MODULARITY PLAN GOES HERE (How you plan to keep your code modular?)
+The overall approach of using componentized view states at the UI level will map back to the program logic and code structure. The HTML for the view states described below will be created by the application and switched in and out of the DOM using jQuery as view states are required to change. The code to handle these updates will be included as methods in JavaScript libraries that correspond the UI view states.
+
+Additionally, the code for handling view updates, API calls, event handlers, and game functionality, will be stored in separate JavaScript libraries to allow for greater flexibility and code portability.
 
 ## Version Control
 
-VERSION CONTROL PLAN GOES HERE (How will you use version control to backup / track your project?)
+Each feature that will be created should map back to one of the existing user stories. Each of these user stories will have a new branch created. Once a feature is complete and has been tested, the feature branch will be merged back into the release branch and the next feature branch will be created.
+
+While development work on a feature branch is in progress, code will be committed on a regular basis as individual pieces of functionality are completed. These commits will include well-structured commit messages with clear, scannable titles and detailed bodies containing explainations of what was done and why.
 
 ## Creative Spin
 
-What creative spin will you add to your project?
+This project is going to present an minimalist design philosophy, both on the aesthetic and architectural side. It will attempt to demonstrate creativity by leveraging, as much as possible, the capabilities available in the data and frameworks used in the application.
 
 ## Application Template and View States
-The application uses this template to define content view states to update as views change.
+The game application uses this template structure to define its content view states to update them as views change.
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" target="_blank"><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" width="50%"></a>
 
 The template consists of four elements:
 - **Header:** conent depends on authentication state of the user
@@ -284,4 +288,7 @@ A **Square** object represents one of the squares on the game board.
 
 ## Planned Bonuses
 
-Do you plan to attempt any of the bonuses?
+Once the basic requirements of the game project are complete, I plan to:
+- Improve the overall visual experience of the game by leveraging Bootstrap for its out-of-the-box styling and interactivity and experiment with CSS animations to give the game smooth transitions between view state updates.
+- Allow two players to play against each other from different devices
+- Allow for a live player to play against the computer without requiring a complex rules engine
