@@ -16,7 +16,7 @@ Submit detailed answers to the following in this file via a pull request:
 
 -   **A wireframe of what your game project will look like.**
 -   **The data structure you plan to use.**
--   How you will take the markup of the game board and represent it in JS
+-   **How you will take the markup of the game board and represent it in JS**
 -   How you plan to approach this project.
 -   **4-8 user stories for your game project.**
 -   How you plan to keep your code modular.
@@ -32,8 +32,12 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
 
 ## Table of Contents
 - [Application View Template](#application-template-and-view-states)
+  - [Header View States](#header-view-states)
+  - [Content View States](#content-view-states)
 - [User Stories & Wireframes](#user-stories-and-wireframes)
-- [Data Structures](#data-structures)
+  - [Public View](#public-view)
+  - [Sign Up](#sign-up)
+- [Data Structures and Object Definitions](#data-structures-and-object-definitions)
 
 ## Application Template and View States
 The application uses this template to define content view states to update as views change.
@@ -41,18 +45,20 @@ The application uses this template to define content view states to update as vi
 <a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" width="50%"></a>
 
 The template consists of four elements:
-
 - **Header:** conent depends on authentication state of the user
 - **Content:** fixed size area for showing game play and dialog boxes for user input
 - **Message:** element for showing game messages to the player(s)
 - **Footer:** static footer containing copyright information
 
+
 ### Header View States
 The header has two view states, _public_ or _private,_ depending on whether the user has been authenticated.
+
 
 #### Public Header View State
 * _**Link:**_ sign up
 * _**Link:**_ sign in
+
 
 #### Private Header View State
 * _**Brand Title:**_ "tic tac toe”
@@ -68,34 +74,41 @@ The main square in application display can contain
 - _**Grid:**_ displays a 3x3 grid for game play views or to look like the game board for static views
 - _**Form:**_ displays a box the size of the 3x3 grid containing form inputs
 
+
 #### Content View State: Splash Screen
 * _**Layout:**_ 3x3 board grid
 * _**Content:**_ Characters for “tic tac toe” in grid
+
 
 #### Content View State: Sign up
 * _**Layout:**_ form
 * _**Inputs:**_ email, password, and confirm password
 * _**Links:**_ submit and cancel
 
+
 #### Content View State: Sign in
 * _**Layout:**_ : form
 * _**Inputs:**_ email and password
 * _**Links:**_ submit and cancel
+
 
 #### Content View State: Change Password
 * _**Layout:**_ form
 * _**Inputs:**_ password and confirm password
 * _**Links:**_ submit and cancel
 
+
 #### Content View State: Start Game
 * _**Layout:**_ 3x3 board grid
 * _**Links:**_ start game
+
 
 #### Content View State: Play Game
 * _**Layout:**_ 3x3 board grid
 * _**Squares:**_
     * _**Link:**_ clickable square as blank button before select
     * _**Output:**_ static display of “X” or “O” after select
+
 
 #### Content View State: Game Over
 * _**Layout:**_ 3x3 board grid
@@ -196,7 +209,7 @@ These user stories have not yet been groomed and do not have updated wireframes:
 -  **Total Score:** As a player, I want to see the total number of games I have won so that I can understand my skill level.
 
 
-## Data Structures
+## Data Structures and Object Definitions
 The following data structures define how the game will handle the `board`, `squares` on the board, and data structures called `cues` that monitor three squares in a row and determine f the status of the game as a result of the values of those squares.
 
 ### Board Object
