@@ -14,11 +14,11 @@ class.
 
 Submit detailed answers to the following in this file via a pull request:
 
--   **A wireframe of what your game project will look like.**
--   **The data structure you plan to use.**
--   **How you will take the markup of the game board and represent it in JS**
+-   A wireframe of what your game project will look like.
+-   The data structure you plan to use.
+-   How you will take the markup of the game board and represent it in JS
 -   How you plan to approach this project.
--   **4-8 user stories for your game project.**
+-   4-8 user stories for your game project.
 -   How you plan to keep your code modular.
 -   What creative spin will you add to your project?
 -   How will you use version control to backup / track your project?
@@ -31,6 +31,10 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
 # Game Project Scope
 
 ## Table of Contents
+- [Project Approach](#project-approach)
+- [Modularity](#modularity)
+- [Version Control](#version-control)
+- [Creative Spin](creative-spin)
 - [Application View Template](#application-template-and-view-states)
   - [Header View States](#header-view-states)
   - [Content View States](#content-view-states)
@@ -47,6 +51,24 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
   - [Board Object](#board-object)
   - [Cue Object](#cue-object)
   - [Square Object](#square-object)
+- [Planned Bonuses](#planned-bonuses)
+
+
+## Project Approach
+
+STATEMENT OF PROJECT APPROACH GOES HERE (How you plan to approach this project.)
+
+## Modularity
+
+MODULARITY PLAN GOES HERE (How you plan to keep your code modular?)
+
+## Version Control
+
+VERSION CONTROL PLAN GOES HERE (How will you use version control to backup / track your project?)
+
+## Creative Spin
+
+What creative spin will you add to your project?
 
 ## Application Template and View States
 The application uses this template to define content view states to update as views change.
@@ -259,3 +281,7 @@ A **Square** object represents one of the squares on the game board.
 * _**select( ):**_ the square sets its value to “X” or “O"
 * _**draw( ):**_ the square updates its display to “X” or “O” and disables click input for future turns
 * _**reset( ):**_ resets the square back to default (ready to play new game)
+
+## Planned Bonuses
+
+Do you plan to attempt any of the bonuses?
