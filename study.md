@@ -30,32 +30,37 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
 
 # Game Project Scope
 
-## Application View Template
+## Table of Contents
+- [Application View Template](#application-template-and-view-states)
+- [User Stories & Wireframes](#user-stories-and-wireframes)
+- [Data Structures](#data-structures)
+
+## Application Template and View States
 The application uses this template to define content view states to update as views change.
 
 <a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" width="50%"></a>
 
 The template consists of four elements:
 
-- **Header: **conent depends on authentication state of the user
-- **Content: **fixed size area for showing game play and dialog boxes for user input
-- **Message: **element for showing game messages to the player(s)
-- **Footer: **static footer containing copyright information
+- **Header:** conent depends on authentication state of the user
+- **Content:** fixed size area for showing game play and dialog boxes for user input
+- **Message:** element for showing game messages to the player(s)
+- **Footer:** static footer containing copyright information
 
 ### Header View States
 The header has two view states, _public_ or _private,_ depending on whether the user has been authenticated.
 
 #### Public Header View State
-* _**Link: **_ sign up
-* _**Link: **_ sign in
+* _**Link:**_ sign up
+* _**Link:**_ sign in
 
 #### Private Header View State
-* _**Brand Title: **_ "tic tac toe”
-* _**Menu: **_ User (email) Dropdown
-    * _**Link: **_ save game (only active in live game)
-    * _**Link: **_ load game
-    * _**Link: **_ change password
-    * _**Link: **_ sign out
+* _**Brand Title:**_ "tic tac toe”
+* _**Menu:**_ User (email) Dropdown
+    * _**Link:**_ save game (only active in live game)
+    * _**Link:**_ load game
+    * _**Link:**_ change password
+    * _**Link:**_ sign out
 
 
 ### Content View States
@@ -64,40 +69,40 @@ The main square in application display can contain
 - _**Form:**_ displays a box the size of the 3x3 grid containing form inputs
 
 #### Content View State: Splash Screen
-* _**Layout: **_ 3x3 board grid
-* _**Content: **_ Characters for “tic tac toe” in grid
+* _**Layout:**_ 3x3 board grid
+* _**Content:**_ Characters for “tic tac toe” in grid
 
 #### Content View State: Sign up
-* _**Layout: **_ form
-* _**Inputs: **_ email, password, and confirm password
-* _**Links: **_ submit and cancel
+* _**Layout:**_ form
+* _**Inputs:**_ email, password, and confirm password
+* _**Links:**_ submit and cancel
 
 #### Content View State: Sign in
-* _**Layout: **_ : form
-* _**Inputs: **_ email and password
-* _**Links: **_ submit and cancel
+* _**Layout:**_ : form
+* _**Inputs:**_ email and password
+* _**Links:**_ submit and cancel
 
 #### Content View State: Change Password
-* _**Layout: **_ form
-* _**Inputs: **_ password and confirm password
-* _**Links: **_ submit and cancel
+* _**Layout:**_ form
+* _**Inputs:**_ password and confirm password
+* _**Links:**_ submit and cancel
 
 #### Content View State: Start Game
-* _**Layout: **_ 3x3 board grid
-* _**Links: **_ start game
+* _**Layout:**_ 3x3 board grid
+* _**Links:**_ start game
 
 #### Content View State: Play Game
-* _**Layout: **_ 3x3 board grid
-* _**Squares: **_
-    * _**Link: **_ clickable square as blank button before select
-    * _**Output: **_ static display of “X” or “O” after select
+* _**Layout:**_ 3x3 board grid
+* _**Squares:**_
+    * _**Link:**_ clickable square as blank button before select
+    * _**Output:**_ static display of “X” or “O” after select
 
 #### Content View State: Game Over
-* _**Layout: **_ 3x3 board grid
+* _**Layout:**_ 3x3 board grid
 * Link: play again
 
 
-## User Stories & Wireframes
+## User Stories and Wireframes
 
 ### 1. Public View
 As a unauthenticated user, I want to access a public view so that I can create an account or sign in.
@@ -198,25 +203,25 @@ The following data structures define how the game will handle the `board`, `squa
 A **Board** object is the primary data structure representing the game play environment.
 
 #### Attributes
-* _**squares[ ]: **_ an array of nine Square object representing the game board
-* _**cues[ ]: **_ an array of eight Cue objects representing 3 rows, 3 columns, and 2 diagonals
+* _**squares[ ]:**_ an array of nine Square object representing the game board
+* _**cues[ ]:**_ an array of eight Cue objects representing 3 rows, 3 columns, and 2 diagonals
 
 #### Methods
-* _**select( ): **_ the game updates itself when a selection is made
-* _**draw( ): **_ the game updates its view and its squares to display the current game state
-* _**checkWin( ): **_ the game checks to see if the last move has resulted in a win for that player
-* _**reset( ): **_ resets the game back to default (ready to play new game)
+* _**select( ):**_ the game updates itself when a selection is made
+* _**draw( ):**_ the game updates its view and its squares to display the current game state
+* _**checkWin( ):**_ the game checks to see if the last move has resulted in a win for that player
+* _**reset( ):**_ resets the game back to default (ready to play new game)
 
 
 ### Cue Object
 A **Cue** object represents a structure consisting of three sequential squares of the game board. If all three square values are identical, a player has won the game.
 
 #### Attributes
-* _**id: **_ astring identifying cue [ ‘row1', ‘row2', ‘row3', ‘col1', ‘col2', ‘col3', ‘dia1', ‘dia2’ ]
-* _**squares[ ]: **_ an array of three Square objects
+* _**id:**_ astring identifying cue [ ‘row1', ‘row2', ‘row3', ‘col1', ‘col2', ‘col3', ‘dia1', ‘dia2’ ]
+* _**squares[ ]:**_ an array of three Square objects
 
 #### AMethods
-* _**checkWin( ): **_ compares the values in all three squares; returns:
+* _**checkWin( ):**_ compares the values in all three squares; returns:
     * 1 if all values are 'X’
     * -1 if all values are 'O’,
     * 0 if all values are not “X” or “O"
@@ -225,10 +230,10 @@ A **Cue** object represents a structure consisting of three sequential squares o
 A **Square** object represents one of the squares on the game board.
 
 #### Attributes
-* _**cell: **_ which cell number is represented by this square (0-9)
-* _**value: **_ null (default) | 'X' | ‘O’
+* _**cell:**_ which cell number is represented by this square (0-9)
+* _**value:**_ null (default) | 'X' | ‘O’
 
 #### Methods
-* _**select( ): **_ the square sets its value to “X” or “O"
-* _**draw( ): **_ the square updates its display to “X” or “O” and disables click input for future turns
-* _**reset( ): **_ resets the square back to default (ready to play new game)
+* _**select( ):**_ the square sets its value to “X” or “O"
+* _**draw( ):**_ the square updates its display to “X” or “O” and disables click input for future turns
+* _**reset( ):**_ resets the square back to default (ready to play new game)
