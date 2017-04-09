@@ -192,6 +192,7 @@ These user stories have not yet been groomed and do not have updated wireframes:
 
 
 ## Data Structures
+The following data structures define how the game will handle the `board`, `squares` on the board, and data structures called `cues` that monitor three squares in a row and determine f the status of the game as a result of the values of those squares.
 
 ### Board Object
 A **Board** object is the primary data structure representing the game play environment.
