@@ -46,7 +46,8 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
   - [Start New Game](#5-start-new-game)
   - [Play Game](#6-play-game)
   - [Game Over](#7-game-over)
-  - [Backlog](#backlog)
+  - [Save Game](#8-save-game)
+  - [Load Game](#9-load-game)
 - [Data Structures and Object Definitions](#data-structures-and-object-definitions)
   - [Board Object](#board-object)
   - [Cue Object](#cue-object)
@@ -147,8 +148,13 @@ The main square in application display can contain
 
 #### Content View State: Game Over
 * _**Layout:**_ 3x3 board grid
-* Link: play again
+* _**Link:**_ play again
 
+#### Content View State: Load Game
+* _**Layout:**_ form
+* _**List:**_ saved games
+* _**Link:**_ load
+* _**Link:**_ cancel
 
 ## User Stories and Wireframes
 
@@ -226,7 +232,7 @@ As player, I want to make a move so the game can determine if that move changes 
 
 
 ### 7. Game Over
-As a player, I want to see when the game is over so that I can learn who won and choose to play again.
+As a player, I want to see when the game is over so that I can learn who won and see how many games I have won.
 - **User:** authenticated
 - **View:** Game Over
 - **Header View State:** Private
@@ -237,11 +243,25 @@ As a player, I want to see when the game is over so that I can learn who won and
 
 <a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/08-game-over-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/08-game-over-view.png" width="50%"></a>
 
-### Backlog
-These user stories have not yet been groomed and do not have updated wireframes:
--  **Save Game:** As a player, I want to be able to save my current game so that I can continue playing later.
--  **Load Game:** As a returning player, I want to be able to load one of my saved games so that i can continue playing.
--  **Total Score:** As a player, I want to see the total number of games I have won so that I can understand my skill level.
+### 8. Save Game
+As a player, I want to be able to save my current game so that I can continue playing later.
+- **User:** authenticated
+- **View:** Game Play
+- **Header View State:** Private
+- **Content View State:** Game Play
+- **Message:** display confirmation/error message
+- **Footer:** static
+- **activeGame:** true
+
+### 9. Load Game
+As a returning player, I want to be able to load one of my saved games so that i can continue playing.
+- **User:** authenticated
+- **View:** Game Start or Game Over
+- **Header View State:** Private
+- **Content View State:** Load Game
+- **Message:** display game confirmation/error messages
+- **Footer:** static
+- **activeGame:** false
 
 
 ## Data Structures and Object Definitions
