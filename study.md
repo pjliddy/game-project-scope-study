@@ -44,9 +44,9 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
   - [Game Over](#7-game-over)
   - [Backlog](#backlog)
 - [Data Structures and Object Definitions](#data-structures-and-object-definitions)
-  - [Board Objecct](#board-object)
-  - [Cue Objecct](#cue-object)
-  - [Square Objecct](#square-object)
+  - [Board Object](#board-object)
+  - [Cue Object](#cue-object)
+  - [Square Object](#square-object)
 
 ## Application Template and View States
 The application uses this template to define content view states to update as views change.
@@ -242,7 +242,7 @@ A **Cue** object represents a structure consisting of three sequential squares o
 * _**id:**_ astring identifying cue [ ‘row1', ‘row2', ‘row3', ‘col1', ‘col2', ‘col3', ‘dia1', ‘dia2’ ]
 * _**squares[ ]:**_ an array of three Square objects
 
-#### AMethods
+#### Methods
 * _**checkWin( ):**_ compares the values in all three squares; returns:
     * 1 if all values are 'X’
     * -1 if all values are 'O’,
