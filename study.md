@@ -35,9 +35,18 @@ has instructions to link to a picture you've uploaded to a service like [Imgur](
   - [Header View States](#header-view-states)
   - [Content View States](#content-view-states)
 - [User Stories & Wireframes](#user-stories-and-wireframes)
-  - [Public View](#public-view)
-  - [Sign Up](#sign-up)
+  - [Public View](#1-public-view)
+  - [Sign Up](#2-sign-up)
+  - [Sign In](#3-sign-in)
+  - [Change Password](#4-change-password)
+  - [Start New Game](#5-start-new-game)
+  - [Play Game](#6-play-game)
+  - [Game Over](#7-game-over)
+  - [Backlog](#backlog)
 - [Data Structures and Object Definitions](#data-structures-and-object-definitions)
+  - [Board Objecct](#board-object)
+  - [Cue Objecct](#cue-object)
+  - [Square Objecct](#square-object)
 
 ## Application Template and View States
 The application uses this template to define content view states to update as views change.
