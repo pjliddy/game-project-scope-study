@@ -78,7 +78,7 @@ This project is going to present an minimalist design philosophy, both on the ae
 ## Application Template and View States
 The game application uses this template structure to define its content view states to update them as views change.
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" target="_blank"><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-template.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/00-template.png" target="_blank"><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/00-template.png" width="50%"></a>
 
 The template consists of four elements:
 - **Header:** conent depends on authentication state of the user
@@ -168,7 +168,7 @@ As a unauthenticated user, I want to access a public view so that I can create a
 - **Footer:** static
 - **activeGame:** false
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/02-public-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/02-public-view.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-public.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/01-public.png" width="50%"></a>
 
 ### 2. Sign Up
 As a new user, I want to be able to create an account so that I can sign in and play the game.
@@ -180,7 +180,7 @@ As a new user, I want to be able to create an account so that I can sign in and 
 - **Footer:** static
 - **activeGame:** false
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/03-sign-up-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/03-sign-up-view.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/02-sign-up.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/02-sign-up.png" width="50%"></a>
 
 ### 3. Sign In
 As an existing user, I want to be able to sign in so that I can play the game.
@@ -192,7 +192,7 @@ As an existing user, I want to be able to sign in so that I can play the game.
 - **Footer:** static
 - **activeGame:** false
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/04-sign-in-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/04-sign-in-view.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/03-sign-in.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/03-sign-in.png" width="50%"></a>
 
 ### 4. Change Password
 As an authenticated user, I want to change my password so that I can keep my account secure.
@@ -204,7 +204,7 @@ As an authenticated user, I want to change my password so that I can keep my acc
 - **Footer:** static
 - **activeGame:** true or false
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/05-change-password-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/05-change-password-view.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/04-change-password.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/04-change-password.png" width="50%"></a>
 
 ### 5. Start New Game
 As an authenticated user, I want to start a new game so that I can begin playing.
@@ -216,7 +216,7 @@ As an authenticated user, I want to start a new game so that I can begin playing
 - **Footer:** static
 - **activeGame:** false
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/06-start-game-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/06-start-game-view.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/05-start-game.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/05-start-game.png" width="50%"></a>
 
 ### 6. Play Game
 As player, I want to make a move so the game can determine if that move changes the outcome of the game (active, win, lose, tie, draw).
@@ -228,7 +228,7 @@ As player, I want to make a move so the game can determine if that move changes 
 - **Footer:** static
 - **activeGame:** true
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/07-play-game-vIew.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/07-play-game-vIew.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/06-play-game.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/06-play-game.png" width="50%"></a>
 
 
 ### 7. Game Over
@@ -241,7 +241,7 @@ As a player, I want to see when the game is over so that I can learn who won and
 - **Footer:** static
 - **activeGame:** false
 
-<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/08-game-over-view.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/08-game-over-view.png" width="50%"></a>
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/07-game-over.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/07-game-over.png" width="50%"></a>
 
 ### 8. Save Game
 As a player, I want to be able to save my current game so that I can continue playing later.
@@ -253,6 +253,8 @@ As a player, I want to be able to save my current game so that I can continue pl
 - **Footer:** static
 - **activeGame:** true
 
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/08-save-game.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/08-save-game.png" width="50%"></a>
+
 ### 9. Load Game
 As a returning player, I want to be able to load one of my saved games so that i can continue playing.
 - **User:** authenticated
@@ -263,6 +265,7 @@ As a returning player, I want to be able to load one of my saved games so that i
 - **Footer:** static
 - **activeGame:** false
 
+<a href="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/09-load-game.png" target="_blank" ><img src="https://s3.amazonaws.com/pliddy-ga/tic-tac-toe/wireframes/09-load-game.png" width="50%"></a>
 
 ## Data Structures and Object Definitions
 The following data structures define how the game will handle the `board`, `squares` on the board, and data structures called `cues` that monitor three squares in a row and determine f the status of the game as a result of the values of those squares.
